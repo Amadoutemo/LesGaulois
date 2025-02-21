@@ -15,9 +15,34 @@ public class Gaulois {
 	}
 
 	public void parler(String texte) {
-		// TODO Auto-generated method stub
+		System.out.println(prendreParole() + "\"" + texte + "\"");
+	}
+
+	public String toString() {
+		return "Gaulois [nom=" + nom + ", force=" + force + "]";
+	}
+
+	private String prendreParole() {
+		return "Le gaulois " + nom + " : ";
+	}
+
+	public static void main(String[] args) {
+		Gaulois as = new Gaulois("asterix", 8);
+		System.out.println(as.getNom());
+		Romain romain = new Romain("cesar", 5);
+		Romain minus = new Romain("Minus", 6);
+		as.frapper(minus);
+		as.frapper(minus);
+		as.frapper(minus);
 
 	}
 
-	// TODO Auto-generated constructor stub
+	public void frapper(Romain romain) {
+		String nomRomain = romain.getNom();
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomRomain);
+		int forceCoup = force / 3;
+		romain.recevoirCoup(forceCoup);
+
+	}
+
 }
