@@ -25,7 +25,17 @@ public class Gaulois {
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
-
+	public void sePresenter(Village village) {
+		if (village != null) {
+			if (village.getNom().equals("Village des IrrÃ©ductibles")) {
+				System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom() + ".\"");
+			} else {
+				System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom + ". Je suis le chef du village " + village.getNom() + ".\"");
+			}
+		} else {
+			System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.\"");
+		}
+	}
 	public static void main(String[] args) {
 		Gaulois as = new Gaulois("asterix", 8);
 		System.out.println(as.getNom());
@@ -39,7 +49,7 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 		String nomRomain = romain.getNom();
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + nomRomain);
+		System.out.println(nom + " envoie un grand coup dans la mï¿½choire de " + nomRomain);
 		int forceCoup = force / 3;
 		romain.recevoirCoup(forceCoup);
 

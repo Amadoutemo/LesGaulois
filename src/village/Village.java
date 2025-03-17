@@ -24,12 +24,18 @@ public class Village {
 
 	}
 
+	public void afficherVillageois() {
+		System.out.println("Dans le village "  + nom +  " du chef " + chef.getNom() + "vivent les l√©gendaires gaulois :");
+		for (int i = 0; i < nbVillageois; i++) {
+			System.out.println("- " + villageois[i].getNom());
+		}
+	}
 	public void trouverVillageois(int numVillageois){
 		if villageois[numVillageois] != null {
 			return 
 			
 		else {
-			System.out.println("Il níy a pas autant díhabitants dans notre village !");
+			System.out.println("Il nÔøΩy a pas autant dÔøΩhabitants dans notre village !");
 			
 		}
 				
@@ -37,13 +43,11 @@ public class Village {
 	
 		
 		
-	}
-
-	public static void main(String[] args) {
-		Village village = new Village("Nom", 20);
-		Gaulois as = new Gaulois("Asterix", 5);
-		village.ajouterVIllageois(as);
-
+		public static void main(String[] args) {
+			Village village = new Village("Nom", 20);
+			Gaulois as = new Gaulois("Asterix", 5);
+			village.ajouterVIllageois(as);
+		}
 	}
 
 }

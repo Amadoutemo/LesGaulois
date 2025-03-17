@@ -9,11 +9,11 @@ public class TestGaulois {
 		Gaulois as = new Gaulois("asterix", 8);
 		Gaulois ob = new Gaulois("obelix", 8);
 
-		as.parler("Bonjour Obélix.");
-		ob.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
-		as.parler("Oui très bonne idée");
+		as.parler("Bonjour Obï¿½lix.");
+		ob.parler("Bonjour Astï¿½rix. Ca te dirais d'aller chasser des sangliers ?");
+		as.parler("Oui trÃ¨s bonne idÃ©e");
 		Romain minus = new Romain("Minus", 6);
 		System.out.println(
-				"Dans la forêt " + as.getNom() + " et " + ob.getNom() + " tombe nez à sur le romain " + minus.getNom());
+				"Dans la forï¿½t " + as.getNom() + " et " + ob.getNom() + " tombe nez ï¿½ sur le romain " + minus.getNom());
 	}
 }
