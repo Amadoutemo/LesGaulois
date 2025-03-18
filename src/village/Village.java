@@ -24,24 +24,7 @@ public class Village {
 
 	}
 
-	public void afficherVillageois() {
-		System.out.println("Dans le village "  + nom +  " du chef " + chef.getNom() + "vivent les légendaires gaulois :");
-		for (int i = 0; i < nbVillageois; i++) {
-			System.out.println("- " + villageois[i].getNom());
-		}
-	}
-	public void trouverVillageois(int numVillageois){
-		if villageois[numVillageois] != null {
-			return 
-			
-		else {
-			System.out.println("Il n�y a pas autant d�habitants dans notre village !");
-			
-		}
-				
-		}
-	
-		
+
 		
 		public static void main(String[] args) {
 			Village village = new Village("Nom", 20);
@@ -50,4 +33,4 @@ public class Village {
 		}
 	}
 
-}
+
