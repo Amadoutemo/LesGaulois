@@ -42,6 +42,10 @@ public class Gaulois {
 		as.frapper(minus);
 
 	}
+	public void booster(int effet) {
+	    this.effetPotion += effet;
+	    System.out.println(nom + " a été boosté ! Effet actuel : " + effetPotion);
+	}
 
 //	public void frapper(Romain romain) {
 //		String nomRomain = romain.getNom();

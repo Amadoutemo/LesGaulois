@@ -14,7 +14,9 @@ public class Romain {
 	public String getNom() {
 		return nom;
 	}
-
+	public int getForce() {
+	    return force;
+}
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
@@ -75,6 +77,12 @@ public class Romain {
 		}
 		return equipementEjecte;
 	}
+	public void sEquiper(Equipement equipement) {
+	    if (nbEquipement >= 2) {
+	        System.out.println(nom + " est déjà bien équipé !");
+	        return;
+	    }
+}
 
 	public static void main(String[] args) {
 		System.out.println(Equipement.CASQUE);

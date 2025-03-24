@@ -11,10 +11,6 @@ public class Chaudron {
 		this.effetPotion = effetPotion;
 	}
 
-	public boolean resterPotion() {
-		return quantitePotion == 0;
-	}
-
 	public void fabriquerPotion(int quantiteAjoutee) {
 		if (quantiteAjoutee > 0) {
 			quantitePotion += quantiteAjoutee;
@@ -27,13 +23,23 @@ public class Chaudron {
 		}
 	}
 
-	public void remplirChaudron() {
-		quantitePotion = capaciteMax;
-		System.out.println("Le chaudron est maintenant plein !");
+	public void remplirChaudron(int quantite) {
+		this.quantitePotion += quantite;
+
 	}
 
 	public int getEffetPotion() {
 		return effetPotion;
+	}
+
+	public void utiliserPotion() {
+		if (quantitePotion > 0) {
+			quantitePotion--;
+		}
+	}
+
+	public boolean restePotion() {
+		return quantitePotion > 0;
 	}
 
 	public void afficherEtat() {
